@@ -60,61 +60,63 @@ img {
   padding: 5px 20px;
   cursor: pointer;
 }
-.section-title a {
-  margin: 30px 20px;
-  font-size: 1.6rem;
-  position: relative;
-}
-.section-title a.active {
-  color: var(--primary-color);
-}
-
-.section-title a::after {
-  position: absolute;
-  content: "";
-  width: 0%;
-  height: 3px;
-  background-image: linear-gradient(to right, #fbbd61, #ec7532);
-  left: 0;
-  bottom: -10px;
-  transition: all -0.5s;
-}
-
-.section-title a:hover::after {
-  width: 100%;
-}
-
 .myCol {
   padding: 5px 7.5px !important;
 }
-/* HEADER */
-#header {
-  background-color: var(--light-2-color);
-  color: var(--dark-1-color);
+
+.home-title{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 30px 0;
+  font-size: 1.8rem;
 }
 
-.header__logo img {
-  width: 60px;
+.home-title a{
+  display: inline-block;
+  margin: 0 15px;
+  position: relative;
 }
 
-.header__menu ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.home-title a::after{
+  position: absolute; 
+  content: "";
+  height:2px;
+  width: 0%;
+  background-color: var(--primary-color);
+  left: 0;
+  bottom: 0;
+  border-radius: 5px;
+  transition: all .3s;
 }
-
-.header__menu ul a {
-  color: var(--dark-1-color);
-  margin: 0 10px;
+.home-title a:hover::after{
+  width: 100%;
 }
-
-.header__menu a:hover {
+.home-title a.active{
   color: var(--primary-color);
 }
+/* HEADER */
+
+#header nav{
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  color: black;
+  z-index: 10;
+  padding: 0 16px;
+}
+.navbar-nav a{
+  color: var(--dark-1-color);
+}
+.navbar-brand img{
+  width: 54px;
+}
+.navbar-nav a:hover{
+  color: var(--primary-color);
+}
+
 .signin img {
   display: inline;
   height: auto;
@@ -125,6 +127,39 @@ img {
 
 .signin span {
   color: #9b9b9b;
+}
+
+.toggle-icon{
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--dark-1-color);
+  text-align: center;
+}
+
+.toggle-icon::after{
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 120%;
+    bottom:-10px;
+    background-color: var(--dark-1-color);
+    right:0;
+}
+.toggle-icon::before{
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 120%;
+  top:-10px;
+  background-color: var(--dark-1-color);
+  right:0;
+}
+
+/* CAROUSEL */
+.carousel{
+  margin-top: 64px;
 }
 
 /* FORM FILTER MOVIE */
@@ -267,26 +302,51 @@ img {
   opacity: 1;
 }
 /* NEWS */
+.news{
+  margin-bottom: 30px;
+}
 
+.news__detail img{
+  height: 200px;
+  width: auto;
+  object-fit: fill;
+  padding: 10px;
+}
+.news__detail-item{
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.news__detail-item .news__detail-item-title{
+  font-size: 1.2rem;
+}
+.news__detail-item-content{
+  text-align: justify;
+} 
+.news__detail-item-content{
+  color: var(--light-3-color);
+}
 /* SHOWTIME */
 .showtime .showtime-detail {
   background-color: var(--light-2-color);
   padding: 20px 20xpx;
-  height: 450px;
   border-radius: 5px;
 }
 
 .showtime__movie-theater {
+  
   width: 30%;
-  border-right: 1px solid #e8e3e3;
+  min-height: 100vh;
 }
 .showtime__movie-date {
-  width: 10%;
   border-right: 1px solid #e8e3e3;
+  border-left: 1px solid #e8e3e3;
+  min-height: 100vh;
+  width: 10%;
 }
 .showtime__movie-time {
-  width: 50%;
   padding: 10px 30px;
+  min-height: 100vh;
 }
 .movie-time__item-detail p {
   margin-bottom: 0;
@@ -362,13 +422,13 @@ img {
 .cinema-controller__item::after {
   position: absolute;
   content: "";
-  bottom:-20px;
+  bottom:-21px;
   left:50%;
   transform: translateX(-50%);
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
   border-bottom: 35px solid #fff;
 
 }
@@ -384,7 +444,14 @@ img {
 .movie-theater__item {
   color: var(--dark-1-color);
   display: flex;
+  align-items: flex-start;
   padding: 10px;
+  position: relative;
+}
+.movie-theater__item::after{
+  position: absolute;
+  content:"";
+
 }
 .movie-theater__item img {
   width: 70px;

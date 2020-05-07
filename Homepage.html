@@ -13,8 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <link rel="stylesheet" href="./Homepage.css">
 
@@ -23,32 +22,48 @@
 <body>
   <!-- HEADER -->
   <header id="header">
-    <a href="#" class="header__logo">
-      <img src="./images/logoLight.png" alt="logo">
-    </a>
-    <nav class="header__menu">
-      <ul>
-        <a href="#">
-          <li>Lịch chiếu</li>
-        </a>
-        <a href="#">
-          <li>Cụm rạp</li>
-        </a>
-        <a href="#">
-          <li>Tin tức</li>
-        </a>
-        <a href="#">
-          <li>Tuyển dụng</li>
-        </a>
-      </ul>
+    <nav class="navbar navbar-expand-md">
+      <a href="#" class="navbar-brand">
+        <img src="./images/logoLight.png" alt="logo-web">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <span class="toggle-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Lịch chiếu</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Cụm rạp</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Tin tức
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Sự kiện nổi bật</a>
+              <a class="dropdown-item" href="#">Review</a>
+              <a class="dropdown-item" href="#">Khuyến mãi</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Tuyển dụng</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="signin nav-link">
+              <img src="./images/user.png" alt="signin_img">
+              <span>Đăng nhập</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
-
-    <!-- Sign in -->
-    <a href="#" class="signin">
-      <img src="./images/user.png" alt="signin_img">
-      <span>Đăng nhập</span>
-    </a>
   </header>
+
+
 
   <!-- CAROUSEL -->
   <section class="carousel">
@@ -114,7 +129,7 @@
   </section>
   <!-- TYPE MOVIE -->
   <section class="type-movie container">
-    <div class="section-title d-flex justify-content-center ">
+    <div class="home-title">
       <a class="active">PHIM ĐANG CHIẾU</a>
       <a>PHIM SẮP CHIẾU</a>
     </div>
@@ -328,17 +343,16 @@
 
     </div>
   </section>
-  <div class="triangle-down">
-    
-  </div>
   <!-- SHOWTIME -->
   <section class="showtime container">
-    <p class="showtime_title text-center">LỊCH CHIẾU</p>
+    <div class="home-title">
+      <a class="active">LỊCH CHIẾU</a>
+    </div>
     <div class="cinema-controller">
       <div class="cinema-controller__item ">
         <img src="./images/rap-CGV.png" alt="">
       </div>
-      <div class="cinema-controller__item"> 
+      <div class="cinema-controller__item">
         <img src="./images/lottleLogo.png" alt="">
       </div>
       <div class="cinema-controller__item">
@@ -355,92 +369,189 @@
       </div>
     </div>
     <div class="showtime-detail d-flex">
-        <div class="showtime__movie-theater">
-          <div class="movie-theater__item">
+      <div class="showtime__movie-theater">
+        <div class="movie-theater__item">
+          <div class="movie-theater__item-logo">
             <img src="./images/cgv-1.jpg" alt="cgv1">
-
-            <div class="movie-theater__detail">
-              <p class="movie-theater__name">
-                CGV<span class="ml-2">- Sense City</span>
-              </p>
-              <p class="movie-theater__address">Lầu 3 Sense city...</p>
-              <a href="#">[chi tiết]</a>
-            </div>
           </div>
-          <div class="movie-theater__item">
-            <img src="./images/cgv-1.jpg" alt="cgv1">
-
-            <div class="movie-theater__detail">
-              <p class="movie-theater__name">
-                CGV<span class="ml-2">- Sense City</span>
-              </p>
-              <p class="movie-theater__address">Lầu 3 Sense city...</p>
-              <a href="#">[chi tiết]</a>
-            </div>
-          </div>
-          <div class="movie-theater__item">
-            <img src="./images/cgv-1.jpg" alt="cgv1">
-
-            <div class="movie-theater__detail">
-              <p class="movie-theater__name">
-                CGV<span class="ml-2">- Sense City</span>
-              </p>
-              <p class="movie-theater__address">Lầu 3 Sense city...</p>
-              <a href="#">[chi tiết]</a>
-            </div>
+          <div class="movie-theater__detail">
+            <p class="movie-theater__name">
+              CGV<span class="ml-2">- Sense City</span>
+            </p>
+            <p class="movie-theater__address">Lầu 3 Sense city...</p>
+            <a href="#">[chi tiết]</a>
           </div>
         </div>
-        <div class="showtime__movie-date">
-            <div class="movie-date__item">
-              <p>Thứ 2</p>
-              <p>12-11</p>
-            </div>
-            <div class="movie-date__item">
-              <p>Thứ 3</p>
-              <p>13-11</p>
-            </div>
-            <div class="movie-date__item">
-              <p>Thứ 4</p>
-              <p>14-11</p>
-            </div>
-        </div>
-        <div class="showtime__movie-time">
-          <div class="movie-time__item">
-            <img src="./images/hiem-hoa-rung-chet-jungle-15095199102590.jpg" alt="">
-            <div class="movie-time__item-detail">
-              <p class="movie-time-title">Thảm họa rừng chết
-                <span>C13</span>
-              </p>
-              <p class="mb-4 mt-2"><span class="mr-3">2D</span>Phụ đề</p>
-              <p>
-                <span>12:30</span>
-                <span>12:30</span>
-                <span>12:30</span>
-              </p>
-            </div>
+        <div class="movie-theater__item">
+          <img src="./images/cgv-1.jpg" alt="cgv1">
+
+          <div class="movie-theater__detail">
+            <p class="movie-theater__name">
+              CGV<span class="ml-2">- Sense City</span>
+            </p>
+            <p class="movie-theater__address">Lầu 3 Sense city...</p>
+            <a href="#">[chi tiết]</a>
           </div>
-          <div class="movie-time__item">
-            <img src="./images/ke-san-lung-so-hai.jpg" alt="">
-            <div class="movie-time__item-detail">
-              <p class="movie-time-title">Kẻ săn lùng sợ hãi
-                <span>C18</span>
-              </p>
-              <p class="mb-4 mt-2"><span class="mr-3">2D</span>Phụ đề</p>
-              <p>
-                <span>12:30</span>
-                <span>12:30</span>
-                <span>12:30</span>
-                <span>12:30</span>
-                <span>12:30</span>
-              </p>
-            </div>
-          </div>
-          
         </div>
+        <div class="movie-theater__item">
+          <img src="./images/cgv-1.jpg" alt="cgv1">
+
+          <div class="movie-theater__detail">
+            <p class="movie-theater__name">
+              CGV<span class="ml-2">- Sense City</span>
+            </p>
+            <p class="movie-theater__address">Lầu 3 Sense city...</p>
+            <a href="#">[chi tiết]</a>
+          </div>
+        </div>
+      </div>
+      <div class="showtime__movie-date">
+        <div class="movie-date__item">
+          <p>Thứ 2</p>
+          <p>12-11</p>
+        </div>
+        <div class="movie-date__item">
+          <p>Thứ 3</p>
+          <p>13-11</p>
+        </div>
+        <div class="movie-date__item">
+          <p>Thứ 4</p>
+          <p>14-11</p>
+        </div>
+      </div>
+      <div class="showtime__movie-time">
+        <div class="movie-time__item">
+          <img src="./images/hiem-hoa-rung-chet-jungle-15095199102590.jpg" alt="">
+          <div class="movie-time__item-detail">
+            <p class="movie-time-title">Thảm họa rừng chết
+              <span>C13</span>
+            </p>
+            <p class="mb-4 mt-2"><span class="mr-3">2D</span>Phụ đề</p>
+            <p>
+              <span>12:30</span>
+              <span>12:30</span>
+              <span>12:30</span>
+            </p>
+          </div>
+        </div>
+        <div class="movie-time__item">
+          <img src="./images/ke-san-lung-so-hai.jpg" alt="">
+          <div class="movie-time__item-detail">
+            <p class="movie-time-title">Kẻ săn lùng sợ hãi
+              <span>C18</span>
+            </p>
+            <p class="mb-4 mt-2"><span class="mr-3">2D</span>Phụ đề</p>
+            <p>
+              <span>12:30</span>
+              <span>12:30</span>
+              <span>12:30</span>
+              <span>12:30</span>
+              <span>12:30</span>
+            </p>
+          </div>
+        </div>
+        <div class="movie-time__item">
+          <img src="./images/ke-san-lung-so-hai.jpg" alt="">
+          <div class="movie-time__item-detail">
+            <p class="movie-time-title">Kẻ săn lùng sợ hãi
+              <span>C18</span>
+            </p>
+            <p class="mb-4 mt-2"><span class="mr-3">2D</span>Phụ đề</p>
+            <p>
+              <span>12:30</span>
+              <span>12:30</span>
+              <span>12:30</span>
+              <span>12:30</span>
+              <span>12:30</span>
+            </p>
+          </div>
+        </div>
+        <div class="movie-time__item">
+          <img src="./images/ke-san-lung-so-hai.jpg" alt="">
+          <div class="movie-time__item-detail">
+            <p class="movie-time-title">Kẻ săn lùng sợ hãi
+              <span>C18</span>
+            </p>
+            <p class="mb-4 mt-2"><span class="mr-3">2D</span>Phụ đề</p>
+            <p>
+              <span>12:30</span>
+              <span>12:30</span>
+              <span>12:30</span>
+              <span>12:30</span>
+              <span>12:30</span>
+            </p>
+          </div>
+        </div>
+      </div>
 
     </div>
   </section>
   <!-- NEWS -->
+  <section class="news container">
+    <div class="home-title">
+      <a class="active">TIN TỨC</a>
+      <a>ƯU ĐÃI</a>
+    </div>
+    <div class="news__detail">
+      <div class="news__detail-item">
+        <div class="row">
+          <div class="col-4">
+            <img
+              src="./images/fast-and-furious-9-co-bien-kich-moi-ngay-phat-hanh-cua-phim-doi-tu-2019-sang-2020-15263575332878.jpg"
+              alt="news">
+          </div>
+          <div class="col-8">
+            <p class="news__detail-item-title">GAMING DEALS: BUY 2 GAMES GAMESTOP</p>
+            <p class="news__detail-item-date">
+              <span class="mr-3"><i class="fa fa-calendar"></i> 14/12/2016</span>
+              <span><i class="fa fa-comment"></i> 5 comments</span>
+            </p>
+            <p class="news__detail-item-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aliquam
+              nostrum soluta dolor quod doloribus maiores consectetur deserunt magni autem, mollitia numquam recusandae
+              sapiente natus atque illo! Eius, hic accusamus.</p>
+          </div>
+        </div>
+      </div>
+      <div class="news__detail-item">
+        <div class="row">
+          <div class="col-4">
+            <img
+              src="./images/fast-and-furious-9-co-bien-kich-moi-ngay-phat-hanh-cua-phim-doi-tu-2019-sang-2020-15263575332878.jpg"
+              alt="news">
+          </div>
+          <div class="col-8">
+            <p class="news__detail-item-title">GAMING DEALS: BUY 2 GAMES GAMESTOP</p>
+            <p class="news__detail-item-date">
+              <span class="mr-3"><i class="fa fa-calendar"></i> 14/12/2016</span>
+              <span><i class="fa fa-comment"></i> 5 comments</span>
+            </p>
+            <p class="news__detail-item-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aliquam
+              nostrum soluta dolor quod doloribus maiores consectetur deserunt magni autem, mollitia numquam recusandae
+              sapiente natus atque illo! Eius, hic accusamus.</p>
+          </div>
+        </div>
+      </div>
+      <div class="news__detail-item">
+        <div class="row">
+          <div class="col-4">
+            <img
+              src="./images/fast-and-furious-9-co-bien-kich-moi-ngay-phat-hanh-cua-phim-doi-tu-2019-sang-2020-15263575332878.jpg"
+              alt="news">
+          </div>
+          <div class="col-8">
+            <p class="news__detail-item-title">GAMING DEALS: BUY 2 GAMES GAMESTOP</p>
+            <p class="news__detail-item-date">
+              <span class="mr-3"><i class="fa fa-calendar"></i> 14/12/2016</span>
+              <span><i class="fa fa-comment"></i> 5 comments</span>
+            </p>
+            <p class="news__detail-item-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aliquam
+              nostrum soluta dolor quod doloribus maiores consectetur deserunt magni autem, mollitia numquam recusandae
+              sapiente natus atque illo! Eius, hic accusamus.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
@@ -554,16 +665,12 @@
       </div>
   </footer>
   <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+
