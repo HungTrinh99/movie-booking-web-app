@@ -13,22 +13,33 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <link rel="stylesheet" href="./Homepage.css">
 
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header id="header">
+
+
+  <!-- Header -->
+  <header class="container-fuild" id="header">
     <nav class="navbar navbar-expand-md">
+
+      <!-- Header logo -->
       <a href="#" class="navbar-brand">
-        <img src="./images/logoLight.png" alt="logo-web">
+        <img src="./images/logo-dark-mode.png" alt="logo-web">
       </a>
+      <!-- End Header logo -->
+
+      <!-- Header button toggler -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
         <span class="toggle-icon"></span>
       </button>
+      <!-- End header button toggler -->
+
+      <!-- Navigation bar -->
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
@@ -51,22 +62,25 @@
             <a href="#" class="nav-link">Tuyển dụng</a>
           </li>
         </ul>
+
+        <!-- Sign in -->
         <ul class="navbar-nav">
           <li class="nav-item">
             <a href="#" class="signin nav-link">
-              <img src="./images/user.png" alt="signin_img">
-              <span>Đăng nhập</span>
+              <i class="fa fa-user"></i>
+              <p>Đăng nhập</p>
             </a>
           </li>
         </ul>
+        <!-- End Sign in -->
+
       </div>
     </nav>
   </header>
+  <!-- End header -->
 
-
-
-  <!-- CAROUSEL -->
-  <section class="carousel">
+  <!-- Carousel -->
+  <section class="carousel container-fuild">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -94,47 +108,56 @@
       </a>
     </div>
   </section>
-  <!-- FORM FILTER MOVIE -->
+  <!-- End carousel -->
+
+
+  <!-- Filter movie -->
   <section class="filter-movie container">
-    <div class="filter-movie__item">
-      <select>
-        <option>Phim</option>
-        <option>Lời hứa của cha (c13)</option>
-        <option>Fast and furios 9</option>
-      </select>
-    </div>
-    <div class="filter-movie__item">
-      <select>
-        <option>Rạp</option>
-        <option>CGV Cinema</option>
-        <option>Lottle Cinema</option>
-        <option>BHD Cinema</option>
-      </select>
-    </div>
-    <div class="filter-movie__item">
-      <select>
-        <option>Ngày chiếu</option>
-        <option>15.2.2020</option>
-        <option>15.2.2020</option>
-      </select>
-    </div>
-    <div class="filter-movie__item">
-      <select>
-        <option>Suất chiếu</option>
-        <option>14:00</option>
-        <option>14:30</option>
-      </select>
-    </div>
-    <button class="myButton">Mua vé ngay</button>
+    <form class="form-filter-movie">
+      <div class="filter-movie__item">
+        <select>
+          <option class="select-item" selected disabled>Phim</option>
+          <option>Lời hứa của cha (c13)</option>
+          <option>Fast and furios 9</option>
+        </select>
+      </div>
+      <div class="filter-movie__item">
+        <select>
+          <option>Rạp</option>
+          <option>CGV Cinema</option>
+          <option>Lottle Cinema</option>
+          <option>BHD Cinema</option>
+        </select>
+      </div>
+      <div class="filter-movie__item">
+        <select>
+          <option>Ngày chiếu</option>
+          <option>15.2.2020</option>
+          <option>15.2.2020</option>
+        </select>
+      </div>
+      <div class="filter-movie__item">
+        <select>
+          <option>Suất chiếu</option>
+          <option>14:00</option>
+          <option>14:30</option>
+        </select>
+      </div>
+      <button type="submit" class="myButton">Mua vé ngay</button>
+    </form>
   </section>
-  <!-- TYPE MOVIE -->
+  <!-- End Fliter movie -->
+
+
+  <!---------------->
+  <!-- Moive type -->
   <section class="type-movie container">
     <div class="home-title">
       <a class="active">PHIM ĐANG CHIẾU</a>
       <a>PHIM SẮP CHIẾU</a>
     </div>
     <div class="row">
-      <div class="col-sm-12 col-md-6 col-lg-3 myCol">
+      <div class="col-6 col-sm-4 col-md-4 col-lg-3 myCol">
         <div class="type-movie__item">
           <div class="filmThumbnail">
             <img src="./images/24-gio-hoi-sinh-24-hours-to-live-c18-15090874493731.jpg" height="355px" width="100%  "
@@ -169,7 +192,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 col-lg-3 myCol">
+      <div class="col-6 col-sm-4 col-md-4 col-lg-3 myCol">
         <div class="type-movie__item">
           <div class="filmThumbnail">
             <img src="./images/phao-hoa-nen-ngam-tu-duoi-hay-ben-canh-15088436147700.jpg" height="355px" width="100%  "
@@ -204,7 +227,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 col-lg-3 myCol">
+      <div class="col-6 col-sm-4 col-md-4 col-lg-3 myCol">
         <div class="type-movie__item">
           <div class="filmThumbnail">
             <img src="./images/sinh-nhat-chet-choc-happy-death-day-c16-15089876590397.jpg  " alt="movie img">
@@ -238,7 +261,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 col-lg-3 myCol">
+      <div class="col-6 col-sm-4 col-md-4 col-lg-3 myCol">
         <div class="type-movie__item">
           <div class="filmThumbnail">
             <img src="./images/ferdinand.jpg" height="355px" width="100%  " alt="movie img">
@@ -272,7 +295,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 col-lg-3 myCol">
+      <div class="col-6 col-sm-4 col-md-4 col-lg-3 myCol">
         <div class="type-movie__item">
           <div class="filmThumbnail">
             <img src="./images/ke-san-lung-so-hai.jpg" height="355px" width="100%  " alt="movie img">
@@ -306,7 +329,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 col-lg-3 myCol">
+      <div class="col-6 col-sm-4 col-md-4 col-lg-3 myCol">
         <div class="type-movie__item">
           <div class="filmThumbnail">
             <img src="./images/pokemon-to-chon-cau-pokemon-i-choose-you-15095249219579.jpg" alt="movie img">
@@ -340,14 +363,90 @@
           </div>
         </div>
       </div>
-
+      <div class="col-6 col-sm-4 col-md-4 col-lg-3 myCol">
+        <div class="type-movie__item">
+          <div class="filmThumbnail">
+            <img src="./images/pokemon-to-chon-cau-pokemon-i-choose-you-15095249219579.jpg" alt="movie img">
+            <div class="movieItemOverlay"></div>
+            <div class="movie__detail">
+              <i class="fa fa-play d-block faPlay"></i>
+            </div>
+            <div class="movie__item-type">
+              <p>C13</p>
+            </div>
+            <div class="booking-button">
+              <button class="myButton movieItem__button">XEM CHI TIẾT</button>
+              <button class="myButton movieItem__button mr-2">MUA VÉ
+                <i class="fa fa-film"></i>
+              </button>
+            </div>
+          </div>
+          <div class="type-movie__item-info mt-2">
+            <div class="movie__item-infoTitle">
+              <p>BloodShoot (C18)</p>
+            </div>
+            <div class="movie__item-infoTime">
+              <p class="mr-3">110 phút</p>
+              <p class="movie__item-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-4 col-lg-3 myCol">
+        <div class="type-movie__item">
+          <div class="filmThumbnail">
+            <img src="./images/pokemon-to-chon-cau-pokemon-i-choose-you-15095249219579.jpg" alt="movie img">
+            <div class="movieItemOverlay"></div>
+            <div class="movie__detail">
+              <i class="fa fa-play d-block faPlay"></i>
+            </div>
+            <div class="movie__item-type">
+              <p>C13</p>
+            </div>
+            <div class="booking-button">
+              <button class="myButton movieItem__button">XEM CHI TIẾT</button>
+              <button class="myButton movieItem__button mr-2">MUA VÉ
+                <i class="fa fa-film"></i>
+              </button>
+            </div>
+          </div>
+          <div class="type-movie__item-info mt-2">
+            <div class="movie__item-infoTitle">
+              <p>BloodShoot (C18)</p>
+            </div>
+            <div class="movie__item-infoTime">
+              <p class="mr-3">110 phút</p>
+              <p class="movie__item-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  <!-- SHOWTIME -->
+  <!-- End movie type -->
+  <!-------------------->
+
+  <!-------------->
+  <!-- Showtime -->
   <section class="showtime container">
+
+    <!-- Showtime title -->
     <div class="home-title">
       <a class="active">LỊCH CHIẾU</a>
     </div>
+    <!-- End showtime title -->
+
+    <!-- Showtime: List theater logo -->
     <div class="cinema-controller">
       <div class="cinema-controller__item ">
         <img src="./images/rap-CGV.png" alt="">
@@ -368,6 +467,9 @@
         <img src="./images/rap-mega.png" alt="">
       </div>
     </div>
+    <!-- End showtime:List theater logo -->
+
+    <!-- Showtime detail -->
     <div class="showtime-detail d-flex">
       <div class="showtime__movie-theater">
         <div class="movie-theater__item">
@@ -485,79 +587,94 @@
       </div>
 
     </div>
+    <!-- End shwotime detail -->
   </section>
-  <!-- NEWS -->
+  <!-- End showtime -->
+  <!------------------>
+
+  <!-- News -->
   <section class="news container">
     <div class="home-title">
       <a class="active">TIN TỨC</a>
       <a>ƯU ĐÃI</a>
     </div>
-    <div class="news__detail">
-      <div class="news__detail-item">
-        <div class="row">
-          <div class="col-4">
-            <img
-              src="./images/fast-and-furious-9-co-bien-kich-moi-ngay-phat-hanh-cua-phim-doi-tu-2019-sang-2020-15263575332878.jpg"
-              alt="news">
-          </div>
-          <div class="col-8">
-            <p class="news__detail-item-title">GAMING DEALS: BUY 2 GAMES GAMESTOP</p>
-            <p class="news__detail-item-date">
-              <span class="mr-3"><i class="fa fa-calendar"></i> 14/12/2016</span>
-              <span><i class="fa fa-comment"></i> 5 comments</span>
-            </p>
-            <p class="news__detail-item-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aliquam
-              nostrum soluta dolor quod doloribus maiores consectetur deserunt magni autem, mollitia numquam recusandae
-              sapiente natus atque illo! Eius, hic accusamus.</p>
+    <div class="news__content">
+      <div class="row">
+        <div class="col-12 col-md-6 padding-col">
+          <div class="news-item">
+            <div href="#" class="news-item__img">
+              <img src="./images/coco-nguon-cam-hung-mexico-bat-tan-chay-tran-trong-tac-pham-15112415262155.jpg" alt="">
+              <div class="movieItemOverlay"></div>
+            </div>
+            <a href="#" class="news-item__title">
+              <p>Batman vs Jorker ai tốt ai xấu</p>
+            </a>
+            <p class="news-item__description">Người ta nói Batman có một giàn phản diện hay nhất trong giới truyện tranh cũng như điện ảnh, nhưng mình biết chắc chắn khi nghe câu đó người ta chỉ nghĩ đến một người, The Joker - Hoàng tử hề của giới tội phạm.</p>
           </div>
         </div>
-      </div>
-      <div class="news__detail-item">
-        <div class="row">
-          <div class="col-4">
-            <img
-              src="./images/fast-and-furious-9-co-bien-kich-moi-ngay-phat-hanh-cua-phim-doi-tu-2019-sang-2020-15263575332878.jpg"
-              alt="news">
-          </div>
-          <div class="col-8">
-            <p class="news__detail-item-title">GAMING DEALS: BUY 2 GAMES GAMESTOP</p>
-            <p class="news__detail-item-date">
-              <span class="mr-3"><i class="fa fa-calendar"></i> 14/12/2016</span>
-              <span><i class="fa fa-comment"></i> 5 comments</span>
-            </p>
-            <p class="news__detail-item-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aliquam
-              nostrum soluta dolor quod doloribus maiores consectetur deserunt magni autem, mollitia numquam recusandae
-              sapiente natus atque illo! Eius, hic accusamus.</p>
-          </div>
-        </div>
-      </div>
-      <div class="news__detail-item">
-        <div class="row">
-          <div class="col-4">
-            <img
-              src="./images/fast-and-furious-9-co-bien-kich-moi-ngay-phat-hanh-cua-phim-doi-tu-2019-sang-2020-15263575332878.jpg"
-              alt="news">
-          </div>
-          <div class="col-8">
-            <p class="news__detail-item-title">GAMING DEALS: BUY 2 GAMES GAMESTOP</p>
-            <p class="news__detail-item-date">
-              <span class="mr-3"><i class="fa fa-calendar"></i> 14/12/2016</span>
-              <span><i class="fa fa-comment"></i> 5 comments</span>
-            </p>
-            <p class="news__detail-item-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aliquam
-              nostrum soluta dolor quod doloribus maiores consectetur deserunt magni autem, mollitia numquam recusandae
-              sapiente natus atque illo! Eius, hic accusamus.</p>
+        <div class="col-12 col-md-6 padding-col">
+          <div class="news-item">
+            <div href="#" class="news-item__img">
+              <img src="./images/diem-mat-dan-sao-dinh-dam-trong-bom-tan-lien-minh-cong-ly-15106519084263.jpg" alt="">
+              <div class="movieItemOverlay"></div>
+            </div>
+            <a href="#" class="news-item__title">
+              <p>Điểm mặt dàn sao hot trong các phim sắp tới</p>
+            </a>
+            <p class="news-item__description">Người ta nói Batman có một giàn phản diện hay nhất trong giới truyện tranh cũng như điện ảnh.</p>
           </div>
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-12 col-md-4 padding-col">
+        <div class="news-item">
+          <div href="#" class="news-item__img">
+            <img src="./images/nhom-losers-club-lon-dang-dan-dan-lo-dien-trong-sieu-pham-it-chapter-two-15265444875493.jpg" alt="">
+            <div class="movieItemOverlay"></div>
+          </div>
+          <a href="#" class="news-item__title">
+            <p>Batman vs Jorker ai tốt ai xấu</p>
+          </a>
+          <p class="news-item__description">Người ta nói Batman có một giàn phản diện hay nhất trong giới truyện tranh cũng như điện ảnh, nhưng mình biết chắc chắn khi nghe câu đó người ta chỉ nghĩ đến một người, The Joker - Hoàng tử hề của giới tội phạm.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 padding-col">
+        <div class="news-item">
+          <div href="#" class="news-item__img">
+            <img src="./images/coco-nguon-cam-hung-mexico-bat-tan-chay-tran-trong-tac-pham-15112415262155.jpg" alt="">
+            <div class="movieItemOverlay"></div>
+          </div>
+          <a href="#" class="news-item__title">
+            <p>Batman vs Jorker ai tốt ai xấu</p>
+          </a>
+          <p class="news-item__description">Người ta nói Batman có một giàn phản diện hay nhất trong giới truyện tranh cũng như điện ảnh, nhưng mình biết chắc chắn khi nghe câu đó người ta chỉ nghĩ đến một người, The Joker - Hoàng tử hề của giới tội phạm.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 padding-col">
+        <div class="news-item">
+          <div href="#" class="news-item__img">
+            <img src="./images/coco-nguon-cam-hung-mexico-bat-tan-chay-tran-trong-tac-pham-15112415262155.jpg" alt="">
+            <div class="movieItemOverlay"></div>
+          </div>
+          <a href="#" class="news-item__title">
+            <p>Batman vs Jorker ai tốt ai xấu</p>
+          </a>
+          <p class="news-item__description">Người ta nói Batman có một giàn phản diện hay nhất trong giới truyện tranh cũng như điện ảnh, nhưng mình biết chắc chắn khi nghe câu đó người ta chỉ nghĩ đến một người, The Joker - Hoàng tử hề của giới tội phạm.</p>
+        </div>
+      </div>
+    </div>
   </section>
-  <!-- FOOTER -->
-  <footer class="footer">
+  <!-- End news -->
+
+  <!-- Footer -->
+  <footer class="footer container-fuild">
     <div class="container">
+
+      <!-- Footer top -->
       <div class="footer-top">
-        <div class="row">
-          <div class="col-3">
+        <div class="row footer-top-line">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 footer-top__secure">
             <div class="footer-top__item">
               <p class="footer-top__item-title">TIX</p>
               <ul>
@@ -568,12 +685,13 @@
               </ul>
             </div>
           </div>
-          <div class="col-3">
-            <p class="footer-top__item-title">ĐỐI TÁC</p>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 footer-top__partner">
+            <div class="footer-top__item">
+              <p class="footer-top__item-title">ĐỐI TÁC</p>
             <div class="partner-content">
               <div class="row partner">
                 <div class="partner__item">
-                  <a href="#"><img src="./images/lottleLogo.png" alt=""></a>
+                  <a href="#"><img src="./images/logo-dark-mode.png" alt=""></a>
                 </div>
                 <div class="partner__item">
                   <a href="#"><img src="./images/cgvLogo.png" alt=""></a>
@@ -614,27 +732,28 @@
                 </div>
               </div>
             </div>
+            </div>
           </div>
-          <div class="col-3 contact">
+          <div class="col-12 col-md-4 col-lg-3 contact">
             <p class="footer-top__item-title">LIÊN HỆ</p>
             <div class="contact-content">
               <div class="row partner">
-                <div class="partner__item">
+                <div class="contact__item">
                   <a href="#"><img src="./images/facebook-logo.png" alt=""></a>
                 </div>
-                <div class="partner__item">
+                <div class="contact__item">
                   <a href="#"><img src="./images/zalopay_icon.png" alt=""></a>
                 </div>
-                <div class="partner__item">
+                <div class="contact__item">
                   <a href="#"><img src="./images/cybersoft.png" alt=""></a>
                 </div>
-                <div class="partner__item">
+                <div class="contact__item">
                   <a href="#"><img src="./images/lottleLogo.png" alt=""></a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-3 services">
+          <div class="col-12 col-md-12 col-lg-3 services">
             <p class="footer-top__item-title">CHĂM SÓC KHÁCH HÀNG</p>
             <ul>
               <li>Hotline: 113</li>
@@ -644,13 +763,15 @@
           </div>
         </div>
       </div>
+      <!-- End footer top -->
 
+      <!-- Footer bottom -->
       <div class="footer-bottom">
         <div class="row">
-          <div class="col-3">
+          <div class="col-12 col-md-4 ">
             <img src="./images/zion-logo.jpg" alt="">
           </div>
-          <div class="col-6">
+          <div class="col-12 col-md-4 ">
             <p class="footer-bottom-title text-white">TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</p>
             <p>Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh, Việt Nam.</p>
             <p>Giấy chứng nhận đăng ký kinh doanh số: 0101659783,đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020
@@ -658,19 +779,27 @@
             <p>Số Điện Thoại (Hotline): 1900 545 436</p>
             <p>Email: <a href="#">support@tix.vn</a></p>
           </div>
-          <div class="col-3">
+          <div class="col-12 col-md-4">
             <img src="./images/license.png" alt="lisence">
           </div>
         </div>
       </div>
+      <!-- End footer bottom -->
   </footer>
+  <!-- End footer -->
+
+
   <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
-
-
